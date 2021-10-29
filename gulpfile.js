@@ -14,7 +14,7 @@ function sassTask(){
 function jsTask(){
     return src('app/js/*.js', {sourcemaps:true})
         .pipe(terser())
-        .pipe(dest('dist'), {sourcemaps:'.'})
+        .pipe(dest('dist', {sourcemaps:'.'}));
 }
 
 
